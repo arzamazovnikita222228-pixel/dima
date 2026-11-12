@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шпаргалка по геометрии — 9 класс</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            background: #f4f7fb;
+            color: #1e2b3c;
+            line-height: 1.55;
+            padding: 1.5rem;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 1.5rem 1rem;
+            background: linear-gradient(145deg, #1e3a5f, #2b4f7a);
+            border-radius: 32px;
+            color: white;
+            box-shadow: 0 12px 24px -8px rgba(0, 30, 60, 0.3);
+        }
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.4rem;
+        }
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .quick-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        .quick-nav a {
+            background: white;
+            color: #1e3a5f;
+            text-decoration: none;
+            padding: 0.55rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+            border: 1px solid #d0deed;
+            transition: all 0.15s;
+        }
+        .quick-nav a:hover {
+            background: #1e3a5f;
+            color: white;
+            border-color: #1e3a5f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(30, 58, 95, 0.25);
+        }
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 1.6rem 1.8rem;
+            margin-bottom: 1.8rem;
+            box-shadow: 0 8px 20px -6px rgba(0, 20, 40, 0.08);
+            border: 1px solid #e6edf5;
+            transition: box-shadow 0.2s;
+        }
+        .card:hover {
+            box-shadow: 0 12px 26px -8px rgba(0, 30, 60, 0.12);
+        }
+        .card h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1e3a5f;
+            margin-bottom: 1rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 3px solid #d0e2f5;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.2rem 0 0.5rem;
+            color: #2b4f7a;
+        }
+        .card h3:first-of-type {
+            margin-top: 0.3rem;
+        }
+        .formula-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1rem;
+            margin: 0.8rem 0;
+        }
+        .formula-item {
+            background: #f0f5fe;
+            border-radius: 16px;
+            padding: 0.9rem 1rem;
+            border-left: 5px solid #2b6a9e;
+            font-size: 0.98rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: background 0.15s;
+        }
+        .formula-item:hover {
+            background: #e4eefc;
+        }
+        .formula-item strong {
+            color: #0d2b44;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.15rem;
+        }
+        .formula {
+            font-family: 'Cambria', 'Times New Roman', serif;
+            font-size: 1.18rem;
+            font-weight: 600;
+            color: #0a2a4a;
+            letter-spacing: 0.3px;
+        }
+        .formula em {
+            font-style: italic;
+            font-weight: 500;
+            color: #2b4f7a;
+        }
+        .note {
+            background: #fff8e7;
+            border-left: 5px solid #f5b342;
+            padding: 0.7rem 1rem;
+            border-radius: 12px;
+            font-size: 0.93rem;
+            margin: 0.8rem 0;
+            color: #4a3b1f;
+        }
+        .note strong {
+            color: #a86f1a;
+        }
+        .badge {
+            display: inline-block;
+            background: #d0e2f5;
+            color: #1e3a5f;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+            margin: 0.5rem 0 0.8rem;
+        }
+        li {
+            margin-bottom: 0.3rem;
+        }
+        .cols-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+        }
+        @media (max-width: 700px) {
+            body { padding: 0.8rem; }
+            header h1 { font-size: 1.7rem; }
+            .card { padding: 1.2rem; }
+            .cols-2 { grid-template-columns: 1fr; }
+            .formula-grid { grid-template-columns: 1fr; }
+        }
+        .footer-note {
+            text-align: center;
+            margin-top: 2.5rem;
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: #5f7a99;
+            border-top: 1px dashed #c0d3e9;
+        }
+        .symbol {
+            font-family: 'Cambria', 'Times New Roman', serif;
+            font-weight: 700;
+            color: #1e3a5f;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>📐 Геометрия 9 класс</h1>
+        <p>Все главные формулы и теоремы для контрольных и ОГЭ</p>
+    </header>
+
+    <!-- Быстрая навигация -->
+    <nav class="quick-nav">
+        <a href="#trig">Тригонометрия</a>
+        <a href="#triangles">Треугольники</a>
+        <a href="#vectors">Векторы</a>
+        <a href="#coords">Координаты</a>
+        <a href="#polygons">Многоугольники</a>
+        <a href="#circle">Окружность и круг</a>
+        <a href="#areas">Площади</a>
+    </nav>
+
+    <!-- 1. Тригонометрия -->
+    <section class="card" id="trig">
+        <h2>1. Синус, косинус, тангенс <span class="badge">0°–180°</span></h2>
+        <p>В 9 классе тригонометрические функции определяются для углов от 0° до 180°. Основное тождество и формулы приведения — база для решения треугольников.</p>
+        <div class="formula-grid">
+            <div class="formula-item"><strong>Основное тождество</strong><span class="formula">sin²α + cos²α = 1</span></div>
+            <div class="formula-item"><strong>Тангенс</strong><span class="formula">tg α = sin α / cos α</span></div>
+            <div class="formula-item"><strong>Приведение (180° − α)</strong><span class="formula">sin(180°−α) = sin α<br>cos(180°−α) = −cos α</span></div>
+            <div class="formula-item"><strong>Приведение (90° − α)</strong><span class="formula">sin(90°−α) = cos α<br>cos(90°−α) = sin α</span></div>
+        </div>
+        <div class="note"><strong>Запомни:</strong> для тупых углов (90° < α < 180°) синус положителен, а косинус и тангенс — отрицательны.</div>
+    </section>
+
+    <!-- 2. Треугольники: теоремы синусов и косинусов -->
+    <section class="card" id="triangles">
+        <h2>2. Решение треугольников</h2>
+        <p>Теоремы синусов и косинусов позволяют найти неизвестные стороны и углы любого треугольника.</p>
+        <div class="formula-grid">
+            <div class="formula-item"><strong>Теорема синусов</strong><span class="formula">a / sin A = b / sin B = c / sin C = 2R</span><span style="font-size:0.85rem; color:#3f5e7e;">R — радиус описанной окружности</span></div>
+            <div class="formula-item"><strong>Теорема косинусов</strong><span class="formula">c² = a² + b² − 2ab·cos C</span></div>
+            <div class="formula-item"><strong>Площадь через синус</strong><span class="formula">S = ½ · a · b · sin C</span></div>
+        </div>
+        <h3>Полезно знать</h3>
+        <ul>
+            <li><strong>Сумма углов</strong> треугольника = 180°.</li>
+            <li><strong>Теорема Пифагора</strong> (только для прямоугольного): <span class="symbol">a² + b² = c²</span>.</li>
+            <li><strong>Средняя линия</strong> параллельна стороне и равна её половине.</li>
+            <li><strong>Формула Герона</strong> (если даны три стороны): <span class="symbol">S = √(p(p−a)(p−b)(p−c))</span>, где p — полупериметр.</li>
+        </ul>
+    </section>
+
+    <!-- 3. Векторы -->
+    <section class="card" id="vectors">
+        <h2>3. Векторы и скалярное произведение</h2>
+        <p>Одна из ключевых тем 9 класса. Скалярное произведение используется для нахождения углов и длин.</p>
+        <div class="cols-2">
+            <div>
+                <h3>Действия с векторами</h3>
+                <ul>
+                    <li><strong>Сложение:</strong> правило треугольника и параллелограмма.</li>
+                    <li><strong>Вычитание:</strong> a − b = a + (−b).</li>
+                    <li><strong>Умножение на число:</strong> k·a (меняет длину, при k<0 — направление).</li>
+                    <li><strong>Коллинеарность:</strong> a = k·b (если векторы параллельны).</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Скалярное произведение</h3>
+                <div class="formula-item" style="margin-bottom:0.6rem;">
+                    <span class="formula">a · b = |a| · |b| · cos α</span>
+                </div>
+                <div class="formula-item">
+                    <strong>Через координаты</strong>
+                    <span class="formula">a · b = x₁x₂ + y₁y₂</span>
+                </div>
+                <p style="margin-top:0.6rem; font-size:0.92rem;"><strong>Следствия:</strong><br>
+                • a ⊥ b, если a · b = 0.<br>
+                • cos α = (a · b) / (|a|·|b|).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Метод координат -->
+    <section class="card" id="coords">
+        <h2>4. Метод координат</h2>
+        <div class="formula-grid">
+            <div class="formula-item"><strong>Расстояние между точками</strong><span class="formula">d = √((x₂−x₁)² + (y₂−y₁)²)</span></div>
+            <div class="formula-item"><strong>Середина отрезка</strong><span class="formula">x = (x₁+x₂)/2, y = (y₁+y₂)/2</span></div>
+            <div class="formula-item"><strong>Уравнение окружности</strong><span class="formula">(x−a)² + (y−b)² = R²</span><span style="font-size:0.85rem; color:#3f5e7e;">(a;b) — центр, R — радиус</span></div>
+            <div class="formula-item"><strong>Длина вектора</strong><span class="formula">|a| = √(x² + y²)</span></div>
+        </div>
+    </section>
+
+    <!-- 5. Правильные многоугольники -->
+    <section class="card" id="polygons">
+        <h2>5. Правильные многоугольники</h2>
+        <p>Правильный n-угольник: все стороны и углы равны. Вписанная и описанная окружности совпадают по центру.</p>
+        <div class="formula-grid">
+            <div class="formula-item"><strong>Угол правильного n-угольника</strong><span class="formula">α = (n−2)·180° / n</span></div>
+            <div class="formula-item"><strong>Сторона через R (описанная)</strong><span class="formula">aₙ = 2R · sin(180°/n)</span></div>
+            <div class="formula-item"><strong>Радиус вписанной окружности</strong><span class="formula">r = R · cos(180°/n)</span></div>
+            <div class="formula-item"><strong>Площадь через периметр и r</strong><span class="formula">S = ½ · P · r</span></div>
+        </div>
+        <div class="note"><strong>Для правильного треугольника (n=3):</strong> R = a/√3, r = a/(2√3). <strong>Для квадрата (n=4):</strong> R = a/√2, r = a/2.</div>
+    </section>
+
+    <!-- 6. Окружность и круг -->
+    <section class="card" id="circle">
+        <h2>6. Длина окружности и площадь круга</h2>
+        <div class="formula-grid">
+            <div class="formula-item"><strong>Длина окружности</strong><span class="formula">C = 2πR</span></div>
+            <div class="formula-item"><strong>Длина дуги (α — градусы)</strong><span class="formula">l = (πR / 180) · α</span></div>
+            <div class="formula-item"><strong>Площадь круга</strong><span class="formula">S = πR²</span></div>
+            <div class="formula-item"><strong>Площадь сектора</strong><span class="formula">S = (πR² / 360) · α</span></div>
+        </div>
+        <h3>Вписанные и описанные четырёхугольники</h3>
+        <ul>
+            <li><strong>Вписанный четырёхугольник:</strong> сумма противоположных углов = 180°.</li>
+            <li><strong>Описанный четырёхугольник:</strong> суммы противоположных сторон равны (a + c = b + d).</li>
+        </ul>
+    </section>
+
+    <!-- 7. Площади фигур (повторение) -->
+    <section class="card" id="areas">
+        <h2>7. Площади фигур — быстрое повторение</h2>
+        <p>Эти формулы пригодятся и в задачах на векторы/координаты, и в простых заданиях первой части.</p>
+        <div class="formula-grid">
+            <div class="formula-item"><strong>Треугольник</strong><span class="formula">S = ½ · a · h<br>S = ½ · a · b · sin C</span></div>
+            <div class="formula-item"><strong>Параллелограмм</strong><span class="formula">S = a · h<br>S = a · b · sin α</span></div>
+            <div class="formula-item"><strong>Трапеция</strong><span class="formula">S = ((a+b)/2) · h</span></div>
+            <div class="formula-item"><strong>Ромб</strong><span class="formula">S = ½ · d₁ · d₂</span></div>
+            <div class="formula-item"><strong>Квадрат</strong><span class="formula">S = a²</span></div>
+            <div class="formula-item"><strong>Прямоугольник</strong><span class="formula">S = a · b</span></div>
+        </div>
+        <div class="note"><strong>Отношение площадей подобных фигур</strong> равно квадрату коэффициента подобия: S₁/S₂ = k².</div>
+    </section>
+
+    <!-- Дополнительные важные мелочи -->
+    <section class="card">
+        <h2>⚡ Что ещё часто спрашивают</h2>
+        <div class="cols-2">
+            <div>
+                <h3>Сумма углов</h3>
+                <ul>
+                    <li>Треугольник: 180°.</li>
+                    <li>Выпуклый n-угольник: (n−2)·180°.</li>
+                </ul>
+                <h3>Свойства равнобедренного треугольника</h3>
+                <ul>
+                    <li>Углы при основании равны.</li>
+                    <li>Медиана к основанию = биссектриса = высота.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Прямоугольный треугольник</h3>
+                <ul>
+                    <li>Катет против угла 30° = ½ гипотенузы.</li>
+                    <li>Медиана к гипотенузе = радиус описанной окружности.</li>
+                </ul>
+                <h3>Движения плоскости</h3>
+                <ul>
+                    <li>Осевая симметрия, центральная симметрия, поворот, параллельный перенос.</li>
+                    <li>Движение сохраняет расстояния и углы.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer-note">
+        Шпаргалка по геометрии для 9 класса. Используй как быстрый справочник перед контрольной или ОГЭ.
+    </div>
+</div>
+</body>
+</html>
