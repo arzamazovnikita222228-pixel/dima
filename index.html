@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Шпаргалка по геометрии — 9 класс</title>
+    <title>Бокс — полезная информация</title>
     <style>
         * {
             box-sizing: border-box;
@@ -12,33 +12,34 @@
         }
         body {
             font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
-            background: #f4f7fb;
-            color: #1e2b3c;
-            line-height: 1.55;
+            background: #f5f3ef;
+            color: #1e1e1e;
+            line-height: 1.6;
             padding: 1.5rem;
         }
         .container {
-            max-width: 1100px;
+            max-width: 1120px;
             margin: 0 auto;
         }
         header {
             text-align: center;
             margin-bottom: 2rem;
-            padding: 1.5rem 1rem;
-            background: linear-gradient(145deg, #1e3a5f, #2b4f7a);
+            padding: 2.2rem 1rem;
+            background: linear-gradient(135deg, #1a1a1a, #3a1f1f);
             border-radius: 32px;
-            color: white;
-            box-shadow: 0 12px 24px -8px rgba(0, 30, 60, 0.3);
+            color: #fff;
+            box-shadow: 0 14px 28px -10px rgba(0, 0, 0, 0.4);
+            border-bottom: 6px solid #c0392b;
         }
         header h1 {
-            font-size: 2.2rem;
-            font-weight: 700;
+            font-size: 2.4rem;
+            font-weight: 800;
             letter-spacing: -0.5px;
             margin-bottom: 0.4rem;
         }
         header p {
             font-size: 1.1rem;
-            opacity: 0.9;
+            opacity: 0.85;
         }
         .quick-nav {
             display: flex;
@@ -48,101 +49,92 @@
             margin-bottom: 2rem;
         }
         .quick-nav a {
-            background: white;
-            color: #1e3a5f;
+            background: #fff;
+            color: #2b2b2b;
             text-decoration: none;
             padding: 0.55rem 1.2rem;
             border-radius: 40px;
             font-weight: 600;
             font-size: 0.95rem;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-            border: 1px solid #d0deed;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e0d8d0;
             transition: all 0.15s;
         }
         .quick-nav a:hover {
-            background: #1e3a5f;
-            color: white;
-            border-color: #1e3a5f;
+            background: #c0392b;
+            color: #fff;
+            border-color: #c0392b;
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(30, 58, 95, 0.25);
+            box-shadow: 0 6px 14px rgba(192, 57, 43, 0.35);
         }
         .card {
-            background: white;
+            background: #fff;
             border-radius: 24px;
-            padding: 1.6rem 1.8rem;
+            padding: 1.7rem 1.9rem;
             margin-bottom: 1.8rem;
-            box-shadow: 0 8px 20px -6px rgba(0, 20, 40, 0.08);
-            border: 1px solid #e6edf5;
+            box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.07);
+            border: 1px solid #ede6de;
             transition: box-shadow 0.2s;
         }
         .card:hover {
-            box-shadow: 0 12px 26px -8px rgba(0, 30, 60, 0.12);
+            box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.12);
         }
         .card h2 {
-            font-size: 1.6rem;
+            font-size: 1.65rem;
             font-weight: 700;
-            color: #1e3a5f;
+            color: #1a1a1a;
             margin-bottom: 1rem;
             padding-bottom: 0.6rem;
-            border-bottom: 3px solid #d0e2f5;
+            border-bottom: 3px solid #e74c3c;
             display: flex;
             align-items: center;
             gap: 0.6rem;
         }
         .card h3 {
-            font-size: 1.2rem;
+            font-size: 1.18rem;
             font-weight: 600;
             margin: 1.2rem 0 0.5rem;
-            color: #2b4f7a;
+            color: #c0392b;
         }
         .card h3:first-of-type {
             margin-top: 0.3rem;
         }
-        .formula-grid {
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
             gap: 1rem;
             margin: 0.8rem 0;
         }
-        .formula-item {
-            background: #f0f5fe;
+        .item {
+            background: #fdf6f5;
             border-radius: 16px;
-            padding: 0.9rem 1rem;
-            border-left: 5px solid #2b6a9e;
-            font-size: 0.98rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            padding: 0.95rem 1.1rem;
+            border-left: 5px solid #c0392b;
+            font-size: 0.97rem;
             transition: background 0.15s;
         }
-        .formula-item:hover {
-            background: #e4eefc;
+        .item:hover {
+            background: #fcece9;
         }
-        .formula-item strong {
-            color: #0d2b44;
+        .item strong {
+            color: #1a1a1a;
             font-weight: 700;
             display: block;
-            margin-bottom: 0.15rem;
+            margin-bottom: 0.25rem;
         }
-        .formula {
-            font-family: 'Cambria', 'Times New Roman', serif;
-            font-size: 1.18rem;
-            font-weight: 600;
-            color: #0a2a4a;
-            letter-spacing: 0.3px;
-        }
-        .formula em {
-            font-style: italic;
-            font-weight: 500;
-            color: #2b4f7a;
+        .item .big {
+            font-family: 'Georgia', serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #a93226;
         }
         .note {
-            background: #fff8e7;
-            border-left: 5px solid #f5b342;
-            padding: 0.7rem 1rem;
+            background: #fef9e7;
+            border-left: 5px solid #f1c40f;
+            padding: 0.75rem 1rem;
             border-radius: 12px;
-            font-size: 0.93rem;
-            margin: 0.8rem 0;
+            font-size: 0.94rem;
+            margin: 0.9rem 0;
             color: #4a3b1f;
         }
         .note strong {
@@ -150,8 +142,8 @@
         }
         .badge {
             display: inline-block;
-            background: #d0e2f5;
-            color: #1e3a5f;
+            background: #f6d5d1;
+            color: #a93226;
             font-size: 0.7rem;
             font-weight: 700;
             text-transform: uppercase;
@@ -171,197 +163,274 @@
         .cols-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.2rem;
+            gap: 1.4rem;
         }
-        @media (max-width: 700px) {
-            body { padding: 0.8rem; }
-            header h1 { font-size: 1.7rem; }
-            .card { padding: 1.2rem; }
-            .cols-2 { grid-template-columns: 1fr; }
-            .formula-grid { grid-template-columns: 1fr; }
+        .table-wrap {
+            overflow-x: auto;
+            margin: 0.6rem 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            min-width: 420px;
+        }
+        th, td {
+            padding: 0.6rem 0.9rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        th {
+            background: #fbeae8;
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        tr:hover td {
+            background: #fdf6f5;
         }
         .footer-note {
             text-align: center;
             margin-top: 2.5rem;
             padding: 1rem;
             font-size: 0.9rem;
-            color: #5f7a99;
-            border-top: 1px dashed #c0d3e9;
+            color: #7a6a60;
+            border-top: 1px dashed #d8cdc4;
         }
-        .symbol {
-            font-family: 'Cambria', 'Times New Roman', serif;
-            font-weight: 700;
-            color: #1e3a5f;
+        @media (max-width: 700px) {
+            body { padding: 0.8rem; }
+            header h1 { font-size: 1.8rem; }
+            .card { padding: 1.2rem; }
+            .cols-2 { grid-template-columns: 1fr; }
+            .grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 <div class="container">
     <header>
-        <h1>📐 Геометрия 9 класс</h1>
-        <p>Все главные формулы и теоремы для контрольных и ОГЭ</p>
+        <h1>🥊 Бокс: всё для новичка</h1>
+        <p>Правила, техника, удары, защита, тренировки и экипировка</p>
     </header>
 
-    <!-- Быстрая навигация -->
     <nav class="quick-nav">
-        <a href="#trig">Тригонометрия</a>
-        <a href="#triangles">Треугольники</a>
-        <a href="#vectors">Векторы</a>
-        <a href="#coords">Координаты</a>
-        <a href="#polygons">Многоугольники</a>
-        <a href="#circle">Окружность и круг</a>
-        <a href="#areas">Площади</a>
+        <a href="#rules">Правила</a>
+        <a href="#stance">Стойка</a>
+        <a href="#punches">Удары</a>
+        <a href="#defense">Защита</a>
+        <a href="#footwork">Работа ног</a>
+        <a href="#training">Тренировки</a>
+        <a href="#gear">Экипировка</a>
+        <a href="#weights">Весовые категории</a>
+        <a href="#terms">Словарь</a>
     </nav>
 
-    <!-- 1. Тригонометрия -->
-    <section class="card" id="trig">
-        <h2>1. Синус, косинус, тангенс <span class="badge">0°–180°</span></h2>
-        <p>В 9 классе тригонометрические функции определяются для углов от 0° до 180°. Основное тождество и формулы приведения — база для решения треугольников.</p>
-        <div class="formula-grid">
-            <div class="formula-item"><strong>Основное тождество</strong><span class="formula">sin²α + cos²α = 1</span></div>
-            <div class="formula-item"><strong>Тангенс</strong><span class="formula">tg α = sin α / cos α</span></div>
-            <div class="formula-item"><strong>Приведение (180° − α)</strong><span class="formula">sin(180°−α) = sin α<br>cos(180°−α) = −cos α</span></div>
-            <div class="formula-item"><strong>Приведение (90° − α)</strong><span class="formula">sin(90°−α) = cos α<br>cos(90°−α) = sin α</span></div>
-        </div>
-        <div class="note"><strong>Запомни:</strong> для тупых углов (90° < α < 180°) синус положителен, а косинус и тангенс — отрицательны.</div>
-    </section>
-
-    <!-- 2. Треугольники: теоремы синусов и косинусов -->
-    <section class="card" id="triangles">
-        <h2>2. Решение треугольников</h2>
-        <p>Теоремы синусов и косинусов позволяют найти неизвестные стороны и углы любого треугольника.</p>
-        <div class="formula-grid">
-            <div class="formula-item"><strong>Теорема синусов</strong><span class="formula">a / sin A = b / sin B = c / sin C = 2R</span><span style="font-size:0.85rem; color:#3f5e7e;">R — радиус описанной окружности</span></div>
-            <div class="formula-item"><strong>Теорема косинусов</strong><span class="formula">c² = a² + b² − 2ab·cos C</span></div>
-            <div class="formula-item"><strong>Площадь через синус</strong><span class="formula">S = ½ · a · b · sin C</span></div>
-        </div>
-        <h3>Полезно знать</h3>
+    <!-- 1. Правила -->
+    <section class="card" id="rules">
+        <h2>1. Правила бокса <span class="badge">кратко</span></h2>
+        <p>Бокс — контактный вид спорта, где два спортсмена наносят друг другу удары кулаками в специальных перчатках. Победа присуждается по очкам или нокаутом.</p>
+        <h3>Основное</h3>
         <ul>
-            <li><strong>Сумма углов</strong> треугольника = 180°.</li>
-            <li><strong>Теорема Пифагора</strong> (только для прямоугольного): <span class="symbol">a² + b² = c²</span>.</li>
-            <li><strong>Средняя линия</strong> параллельна стороне и равна её половине.</li>
-            <li><strong>Формула Герона</strong> (если даны три стороны): <span class="symbol">S = √(p(p−a)(p−b)(p−c))</span>, где p — полупериметр.</li>
+            <li><strong>Раунды:</strong> у любителей — 3 раунда по 3 минуты (Олимпиада), у профессионалов — от 4 до 12 раундов по 3 минуты. Перерыв между раундами — 1 минута.</li>
+            <li><strong>Разрешённые удары:</strong> только кулаком (нанесение открытой ладонью, локтем, головой и т.д. запрещено).</li>
+            <li><strong>Зоны поражения:</strong> разрешено бить только в переднюю и боковую часть головы и в туловище до пояса.</li>
+            <li><strong>Запрещено:</strong> удары ниже пояса, в затылок, по почкам, болевые приёмы, борцовские захваты, удары после команды «стоп».</li>
         </ul>
+        <h3>Как можно победить</h3>
+        <div class="grid">
+            <div class="item"><strong>По очкам</strong>Решение судей после всех раундов.</div>
+            <div class="item"><strong>Нокаут (KO)</strong>Соперник не может подняться до счёта «10».</div>
+            <div class="item"><strong>Технический нокаут (TKO)</strong>Рефери или врач останавливает бой.</div>
+            <div class="item"><strong>Дисквалификация</strong>За нарушение правил.</div>
+        </div>
+        <div class="note"><strong>Система очков (любители):</strong> судьи оценивают каждый раунд 10:9 (победитель раунда получает 10, проигравший 9). При нокдауне — 10:8. При равном раунде — 10:10.</div>
     </section>
 
-    <!-- 3. Векторы -->
-    <section class="card" id="vectors">
-        <h2>3. Векторы и скалярное произведение</h2>
-        <p>Одна из ключевых тем 9 класса. Скалярное произведение используется для нахождения углов и длин.</p>
+    <!-- 2. Стойка -->
+    <section class="card" id="stance">
+        <h2>2. Боевая стойка</h2>
+        <p>Правильная стойка — база всего бокса. Она даёт баланс, защиту и возможность быстро атаковать.</p>
         <div class="cols-2">
             <div>
-                <h3>Действия с векторами</h3>
+                <h3>Классическая (ортодоксальная) стойка</h3>
                 <ul>
-                    <li><strong>Сложение:</strong> правило треугольника и параллелограмма.</li>
-                    <li><strong>Вычитание:</strong> a − b = a + (−b).</li>
-                    <li><strong>Умножение на число:</strong> k·a (меняет длину, при k<0 — направление).</li>
-                    <li><strong>Коллинеарность:</strong> a = k·b (если векторы параллельны).</li>
+                    <li>Левая нога впереди, правая сзади (для правшей).</li>
+                    <li>Ноги на ширине плеч, слегка согнуты в коленях.</li>
+                    <li>Вес распределён равномерно, чуть больше на задней ноге.</li>
+                    <li>Подбородок опущен, взгляд исподлобья.</li>
+                    <li>Правая рука защищает подбородок, левая — выдвинута вперёд.</li>
                 </ul>
             </div>
             <div>
-                <h3>Скалярное произведение</h3>
-                <div class="formula-item" style="margin-bottom:0.6rem;">
-                    <span class="formula">a · b = |a| · |b| · cos α</span>
-                </div>
-                <div class="formula-item">
-                    <strong>Через координаты</strong>
-                    <span class="formula">a · b = x₁x₂ + y₁y₂</span>
-                </div>
-                <p style="margin-top:0.6rem; font-size:0.92rem;"><strong>Следствия:</strong><br>
-                • a ⊥ b, если a · b = 0.<br>
-                • cos α = (a · b) / (|a|·|b|).</p>
+                <h3>Южноpaw (для левшей)</h3>
+                <ul>
+                    <li>Правая нога и правая рука впереди.</li>
+                    <li>Всё зеркально: сильная рука (левая) сзади.</li>
+                    <li>Даёт преимущество против ортодоксального соперника.</li>
+                </ul>
+                <div class="note" style="margin-top:0.6rem;"><strong>Совет:</strong> не скрещивай ноги и не поднимай пятку передней ноги без необходимости — теряешь баланс.</div>
             </div>
         </div>
     </section>
 
-    <!-- 4. Метод координат -->
-    <section class="card" id="coords">
-        <h2>4. Метод координат</h2>
-        <div class="formula-grid">
-            <div class="formula-item"><strong>Расстояние между точками</strong><span class="formula">d = √((x₂−x₁)² + (y₂−y₁)²)</span></div>
-            <div class="formula-item"><strong>Середина отрезка</strong><span class="formula">x = (x₁+x₂)/2, y = (y₁+y₂)/2</span></div>
-            <div class="formula-item"><strong>Уравнение окружности</strong><span class="formula">(x−a)² + (y−b)² = R²</span><span style="font-size:0.85rem; color:#3f5e7e;">(a;b) — центр, R — радиус</span></div>
-            <div class="formula-item"><strong>Длина вектора</strong><span class="formula">|a| = √(x² + y²)</span></div>
+    <!-- 3. Удары -->
+    <section class="card" id="punches">
+        <h2>3. Основные удары <span class="badge">6 классических</span></h2>
+        <p>В боксе всего несколько базовых ударов, но их комбинации бесконечны. Различают прямые, боковые и удары снизу.</p>
+        <div class="grid">
+            <div class="item"><strong>Джеб (Jab)</strong><span class="big">Левый прямой</span>Быстрый, лёгкий, выдвинутой рукой. Используется для разведки и держания дистанции.</div>
+            <div class="item"><strong>Кросс (Cross)</strong><span class="big">Правый прямой</span>Сильный удар с задней руки через корпус. Главный «нокаутирующий» прямой.</div>
+            <div class="item"><strong>Хук (Hook)</strong><span class="big">Боковой</span>Удар согнутой рукой по дуге сбоку. Бьётся в голову или корпус.</div>
+            <div class="item"><strong>Апперкот (Uppercut)</strong><span class="big">Снизу</span>Удар снизу вверх в подбородок или солнечное сплетение.</div>
+            <div class="item"><strong>Оверхенд (Overhand)</strong><span class="big">Сверху</span>Дуговой удар через верх, часто после уклона.</div>
+            <div class="item"><strong>Бэкхенд / свинг</strong><span class="big">Размашистый</span>Широкий боковой удар. Эффективен, но раскрывает защиту.</div>
         </div>
-    </section>
-
-    <!-- 5. Правильные многоугольники -->
-    <section class="card" id="polygons">
-        <h2>5. Правильные многоугольники</h2>
-        <p>Правильный n-угольник: все стороны и углы равны. Вписанная и описанная окружности совпадают по центру.</p>
-        <div class="formula-grid">
-            <div class="formula-item"><strong>Угол правильного n-угольника</strong><span class="formula">α = (n−2)·180° / n</span></div>
-            <div class="formula-item"><strong>Сторона через R (описанная)</strong><span class="formula">aₙ = 2R · sin(180°/n)</span></div>
-            <div class="formula-item"><strong>Радиус вписанной окружности</strong><span class="formula">r = R · cos(180°/n)</span></div>
-            <div class="formula-item"><strong>Площадь через периметр и r</strong><span class="formula">S = ½ · P · r</span></div>
-        </div>
-        <div class="note"><strong>Для правильного треугольника (n=3):</strong> R = a/√3, r = a/(2√3). <strong>Для квадрата (n=4):</strong> R = a/√2, r = a/2.</div>
-    </section>
-
-    <!-- 6. Окружность и круг -->
-    <section class="card" id="circle">
-        <h2>6. Длина окружности и площадь круга</h2>
-        <div class="formula-grid">
-            <div class="formula-item"><strong>Длина окружности</strong><span class="formula">C = 2πR</span></div>
-            <div class="formula-item"><strong>Длина дуги (α — градусы)</strong><span class="formula">l = (πR / 180) · α</span></div>
-            <div class="formula-item"><strong>Площадь круга</strong><span class="formula">S = πR²</span></div>
-            <div class="formula-item"><strong>Площадь сектора</strong><span class="formula">S = (πR² / 360) · α</span></div>
-        </div>
-        <h3>Вписанные и описанные четырёхугольники</h3>
+        <h3>Комбинации для новичка</h3>
         <ul>
-            <li><strong>Вписанный четырёхугольник:</strong> сумма противоположных углов = 180°.</li>
-            <li><strong>Описанный четырёхугольник:</strong> суммы противоположных сторон равны (a + c = b + d).</li>
+            <li><strong>1–2:</strong> джеб + кросс (самая базовая связка).</li>
+            <li><strong>1–2–3:</strong> джеб + кросс + левый хук.</li>
+            <li><strong>1–1–2:</strong> двойной джеб + кросс.</li>
+            <li><strong>Джеб + апперкот:</strong> хорошая связка на средней дистанции.</li>
         </ul>
+        <div class="note"><strong>Важно:</strong> сила удара идёт от ног и корпуса, а не только от руки. Каждый удар начинается с толчка задней ногой и поворота корпуса.</div>
     </section>
 
-    <!-- 7. Площади фигур (повторение) -->
-    <section class="card" id="areas">
-        <h2>7. Площади фигур — быстрое повторение</h2>
-        <p>Эти формулы пригодятся и в задачах на векторы/координаты, и в простых заданиях первой части.</p>
-        <div class="formula-grid">
-            <div class="formula-item"><strong>Треугольник</strong><span class="formula">S = ½ · a · h<br>S = ½ · a · b · sin C</span></div>
-            <div class="formula-item"><strong>Параллелограмм</strong><span class="formula">S = a · h<br>S = a · b · sin α</span></div>
-            <div class="formula-item"><strong>Трапеция</strong><span class="formula">S = ((a+b)/2) · h</span></div>
-            <div class="formula-item"><strong>Ромб</strong><span class="formula">S = ½ · d₁ · d₂</span></div>
-            <div class="formula-item"><strong>Квадрат</strong><span class="formula">S = a²</span></div>
-            <div class="formula-item"><strong>Прямоугольник</strong><span class="formula">S = a · b</span></div>
+    <!-- 4. Защита -->
+    <section class="card" id="defense">
+        <h2>4. Защита</h2>
+        <p>В боксе защита не менее важна, чем атака. Лучший боксёр — тот, кого трудно достать.</p>
+        <div class="grid">
+            <div class="item"><strong>Блок</strong>Подставка перчаток и предплечий под удар.</div>
+            <div class="item"><strong>Уклон (слип)</strong>Смещение головы и корпуса в сторону от удара.</div>
+            <div class="item"><strong>Нырок (дак)</strong>Приседание под летящий хук или свинг.</div>
+            <div class="item"><strong>Оттяжка</strong>Отклонение корпуса назад от удара.</div>
+            <div class="item"><strong>Шаг назад / в сторону</strong>Разрыв дистанции.</div>
+            <div class="item"><strong>Клинч</strong>Сближение и захват, чтобы остановить атаку соперника.</div>
         </div>
-        <div class="note"><strong>Отношение площадей подобных фигур</strong> равно квадрату коэффициента подобия: S₁/S₂ = k².</div>
+        <h3>Базовая защита новичка</h3>
+        <ul>
+            <li>Держи руки высоко, локти прижаты к корпусу.</li>
+            <li>Подбородок опущен, не открывай его.</li>
+            <li>Не закрывай глаза при ударе — смотри на соперника.</li>
+            <li>После атаки сразу возвращай руки в защиту.</li>
+        </ul>
+        <div class="note"><strong>Правило:</strong> защита и атака — одно целое. Уклоняйся и сразу контратакуй — это называется «контрапанч».</div>
     </section>
 
-    <!-- Дополнительные важные мелочи -->
-    <section class="card">
-        <h2>⚡ Что ещё часто спрашивают</h2>
+    <!-- 5. Работа ног -->
+    <section class="card" id="footwork">
+        <h2>5. Работа ног (футворк)</h2>
+        <p>Передвижение в боксе — залог дистанции и баланса. Ноги никогда не скрещиваются.</p>
         <div class="cols-2">
             <div>
-                <h3>Сумма углов</h3>
+                <h3>Основные перемещения</h3>
                 <ul>
-                    <li>Треугольник: 180°.</li>
-                    <li>Выпуклый n-угольник: (n−2)·180°.</li>
-                </ul>
-                <h3>Свойства равнобедренного треугольника</h3>
-                <ul>
-                    <li>Углы при основании равны.</li>
-                    <li>Медиана к основанию = биссектриса = высота.</li>
+                    <li><strong>Шаг вперёд:</strong> сначала передняя нога, затем задняя подтягивается.</li>
+                    <li><strong>Шаг назад:</strong> сначала задняя нога, затем передняя.</li>
+                    <li><strong>Влево / вправо:</strong> ведущая нога в сторону, вторая подтягивается.</li>
+                    <li><strong>Пивот:</strong> поворот на носке передней ноги для смены угла атаки.</li>
                 </ul>
             </div>
             <div>
-                <h3>Прямоугольный треугольник</h3>
+                <h3>Принципы</h3>
                 <ul>
-                    <li>Катет против угла 30° = ½ гипотенузы.</li>
-                    <li>Медиана к гипотенузе = радиус описанной окружности.</li>
-                </ul>
-                <h3>Движения плоскости</h3>
-                <ul>
-                    <li>Осевая симметрия, центральная симметрия, поворот, параллельный перенос.</li>
-                    <li>Движение сохраняет расстояния и углы.</li>
+                    <li>Всегда оставайся на носках, не «плоско» на пятках.</li>
+                    <li>Не скрещивай ноги — сразу потеряешь равновесие.</li>
+                    <li>Двигайся на полшага, а не прыжками.</li>
+                    <li>Держи дистанцию: джеб — твой «дальномер».</li>
                 </ul>
             </div>
+        </div>
+    </section>
+
+    <!-- 6. Тренировки -->
+    <section class="card" id="training">
+        <h2>6. Тренировочный процесс</h2>
+        <p>Типичная тренировка боксёра длится 1–2 часа и включает несколько блоков.</p>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Блок</th><th>Что делают</th><th>Время</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Разминка</td><td>Бег, скакалка, суставная гимнастика</td><td>10–15 мин</td></tr>
+                    <tr><td>ОФП / СФП</td><td>Силовые, прыжки, координация</td><td>15–20 мин</td></tr>
+                    <tr><td>Техника</td><td>Отработка ударов и защиты в парах / на лапах</td><td>20–30 мин</td></tr>
+                    <tr><td>Спарринг / условные бои</td><td>Работа в парах с ограничениями</td><td>10–15 мин</td></tr>
+                    <tr><td>Работа на снарядах</td><td>Мешок, груша, пневмогруша</td><td>10–15 мин</td></tr>
+                    <tr><td>Заминка</td><td>Растяжка, восстановление дыхания</td><td>5–10 мин</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <h3>Ключевые качества боксёра</h3>
+        <div class="grid">
+            <div class="item"><strong>Выносливость</strong>Бег, скакалка, интервальные тренировки.</div>
+            <div class="item"><strong>Скорость</strong>Спринты, работа на скорость реакции.</div>
+            <div class="item"><strong>Сила</strong>Упражнения с собственным весом и отягощениями.</div>
+            <div class="item"><strong>Координация</strong>Скакалка, работа на лапах, теннисный мяч.</div>
+        </div>
+        <div class="note"><strong>Не забывай про восстановление:</strong> сон 7–9 часов, растяжка, вода. Перетренированность — главный враг новичка.</div>
+    </section>
+
+    <!-- 7. Экипировка -->
+    <section class="card" id="gear">
+        <h2>7. Экипировка</h2>
+        <div class="grid">
+            <div class="item"><strong>Боксёрские перчатки</strong>Для спарринга — 12–16 унций, для мешка — 10–12 унций.</div>
+            <div class="item"><strong>Бинты</strong>Защищают кисти и запястья. Мотать обязательно перед каждой тренировкой.</div>
+            <div class="item"><strong>Капа</strong>Защита зубов и челюсти. Обязательна в спарринге.</div>
+            <div class="item"><strong>Шлем</strong>Защита головы (в любительском боксе и на тренировках).</div>
+            <div class="item"><strong>Боксёрки / борцовки</strong>Обувь с хорошей фиксацией и сцеплением.</div>
+            <div class="item"><strong>Спортивная форма</strong>Шорты и майка, не стесняющие движений.</div>
+        </div>
+        <div class="note"><strong>Новичку:</strong> не экономь на бинтах и капе — это самая важная защита. Перчатки для мешка и для спарринга лучше держать отдельно.</div>
+    </section>
+
+    <!-- 8. Весовые категории -->
+    <section class="card" id="weights">
+        <h2>8. Весовые категории <span class="badge">профи</span></h2>
+        <p>В профессиональном боксе вес спортсмена строго регламентирован. Ниже — основные категории (по версии WBC, могут незначительно отличаться у других организаций).</p>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr><th>Категория</th><th>Предел веса</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Минимальный вес (Minimumweight)</td><td>до 47,6 кг</td></tr>
+                    <tr><td>Наилегчайший (Flyweight)</td><td>до 50,8 кг</td></tr>
+                    <tr><td>Легчайший (Bantamweight)</td><td>до 53,5 кг</td></tr>
+                    <tr><td>Полулёгкий (Featherweight)</td><td>до 57,2 кг</td></tr>
+                    <tr><td>Лёгкий (Lightweight)</td><td>до 61,2 кг</td></tr>
+                    <tr><td>Полусредний (Welterweight)</td><td>до 66,7 кг</td></tr>
+                    <tr><td>Средний (Middleweight)</td><td>до 72,6 кг</td></tr>
+                    <tr><td>Полутяжёлый (Light Heavyweight)</td><td>до 79,4 кг</td></tr>
+                    <tr><td>Тяжёлый (Heavyweight)</td><td>свыше 90,7 кг</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="note"><strong>В любителях (Олимпиада)</strong> категорий меньше, а границы весов немного другие — например, есть категории до 51, 57, 63,5, 71, 80 и 92 кг.</div>
+    </section>
+
+    <!-- 9. Словарь терминов -->
+    <section class="card" id="terms">
+        <h2>9. Словарь боксёрских терминов</h2>
+        <div class="grid">
+            <div class="item"><strong>Джеб</strong>Быстрый прямой удар выдвинутой рукой.</div>
+            <div class="item"><strong>Кросс</strong>Прямой удар с задней руки.</div>
+            <div class="item"><strong>Хук</strong>Боковой удар согнутой рукой.</div>
+            <div class="item"><strong>Апперкот</strong>Удар снизу вверх.</div>
+            <div class="item"><strong>Слип</strong>Уклон корпусом от удара.</div>
+            <div class="item"><strong>Дак</strong>Нырок под удар.</div>
+            <div class="item"><strong>Клинч</strong>Сближение и захват для остановки атаки.</div>
+            <div class="item"><strong>Футворк</strong>Работа ног, передвижение.</div>
+            <div class="item"><strong>Лапы</strong>Тренажёр в виде подушек на руках тренера.</div>
+            <div class="item"><strong>Спарринг</strong>Тренировочный бой.</div>
+            <div class="item"><strong>Нокдаун</strong>Падение от удара, после которого боец может встать.</div>
+            <div class="item"><strong>Нокаут</strong>Состояние, при котором боец не может продолжить бой.</div>
         </div>
     </section>
 
     <div class="footer-note">
-        Шпаргалка по геометрии для 9 класса. Используй как быстрый справочник перед контрольной или ОГЭ.
+        Справочник по боксу для новичков и любителей. Тренируйся безопасно и уважай соперника.
     </div>
 </div>
 </body>
